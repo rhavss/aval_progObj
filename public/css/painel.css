@@ -1,0 +1,471 @@
+/* css do painel valorant
+   cores e fontes baseadas no design enviado:
+   fundo escuro, detalhes em vermelho/coral, fonte condensada */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #0f1923;
+    color: #ece8e1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===================================
+   TELA DE LOGIN
+   =================================== */
+
+.login-fundo {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/img/fundo-login.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.login-fundo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 25, 35, 0.55);
+}
+
+.login-caixa {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(15, 25, 35, 0.92);
+    border: 1px solid rgba(255, 70, 85, 0.25);
+    border-radius: 6px;
+    padding: 50px 60px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.login-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.login-cabecalho img {
+    height: 48px;
+}
+
+.login-cabecalho h1 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #ff4655;
+    padding-bottom: 12px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: #bdbdbd;
+    text-transform: uppercase;
+}
+
+.login-form input {
+    width: 320px;
+    background-color: #1f2c38;
+    border: 1px solid #2c3b48;
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: #ece8e1;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #ff4655;
+}
+
+.botao-vermelho {
+    background-color: #ff4655;
+    color: #0f1923;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 0;
+    width: 320px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-vermelho:hover {
+    background-color: #ff2e3f;
+}
+
+.login-arte img {
+    width: 280px;
+    border-radius: 6px;
+}
+
+.erro-login {
+    background-color: rgba(255, 70, 85, 0.15);
+    border: 1px solid #ff4655;
+    color: #ff8a92;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* ===================================
+   ESTRUTURA DO PAINEL (depois do login)
+   =================================== */
+
+.painel {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 230px;
+    background-color: #0f1923;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.sidebar-logo img {
+    height: 32px;
+}
+
+.sidebar-logo span {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ece8e1;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 70, 85, 0.08);
+}
+
+.sidebar-link.ativo {
+    background-color: #ff4655;
+    color: #0f1923;
+}
+
+.sidebar-icone {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.sidebar-sair {
+    margin-top: auto;
+}
+
+.sidebar-sair button {
+    background: none;
+    border: none;
+    color: #ece8e1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.sidebar-sair button:hover {
+    background-color: rgba(255, 70, 85, 0.08);
+}
+
+/* ===================================
+   CONTEUDO PRINCIPAL
+   =================================== */
+
+.conteudo {
+    flex: 1;
+    padding: 40px 50px;
+    background-image: url('/img/fundo-painel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.conteudo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 25, 35, 0.85);
+    z-index: 0;
+}
+
+.conteudo-topo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.conteudo-titulo h2 {
+    font-size: 26px;
+    font-weight: 600;
+    border-bottom: 3px solid #ff4655;
+    padding-bottom: 14px;
+    display: inline-block;
+}
+
+.botao-adicionar {
+    background-color: #ff4655;
+    color: #0f1923;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 26px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.botao-adicionar:hover {
+    background-color: #ff2e3f;
+}
+
+.caixa-conteudo {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(15, 25, 35, 0.92);
+    border-radius: 6px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.alerta-sucesso {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(60, 200, 130, 0.15);
+    border: 1px solid #3cc882;
+    color: #7fe3ae;
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* tabela de listagem */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff4655;
+    padding: 12px 14px;
+    border-bottom: 2px solid rgba(255, 70, 85, 0.25);
+}
+
+table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 15px;
+}
+
+table tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botao-editar, .botao-excluir {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.botao-editar {
+    background-color: #2c5d8a;
+    color: #ece8e1;
+}
+
+.botao-editar:hover {
+    background-color: #356da0;
+}
+
+.botao-excluir {
+    background-color: transparent;
+    border: 1px solid #ff4655;
+    color: #ff4655;
+}
+
+.botao-excluir:hover {
+    background-color: #ff4655;
+    color: #0f1923;
+}
+
+.vazio {
+    text-align: center;
+    padding: 40px 0;
+    color: #8a8a8a;
+    font-size: 15px;
+}
+
+/* formularios de cadastro/edicao */
+
+.form-painel {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(15, 25, 35, 0.92);
+    border-radius: 6px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 560px;
+}
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: #bdbdbd;
+    text-transform: uppercase;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    background-color: #1f2c38;
+    border: 1px solid #2c3b48;
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: #ece8e1;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #ff4655;
+}
+
+.campo-erro {
+    color: #ff8a92;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.botoes-form {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.botao-cancelar {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ece8e1;
+    border-radius: 30px;
+    padding: 14px 26px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.botao-cancelar:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
