@@ -14,7 +14,6 @@
         <div class="sidebar">
             <div class="sidebar-logo">
                 <img src="{{ asset('img/logo-valorant.png') }}" alt="Logo Valorant">
-                <span>VALORANT</span>
             </div>
 
             <div class="sidebar-menu">
