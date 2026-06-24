@@ -32,7 +32,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/img/fundo-login.jpg');
+    background-image: url('/img/fundo-ascent.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -42,7 +42,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(15, 25, 35, 0.55);
+    background: rgba(15, 25, 35, 0.75);
 }
 
 .login-caixa {
@@ -169,8 +169,8 @@ a {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top:15px;
-    margin-bottom: 85px;
+    margin-top:12px;
+    margin-bottom: 88px;
 }
 
 .sidebar-logo img {
@@ -254,7 +254,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(15, 25, 35, 0.55);
+    background: rgba(15, 25, 35, 0.75);
     z-index: 0;
 }
 
