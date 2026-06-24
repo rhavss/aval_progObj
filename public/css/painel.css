@@ -93,7 +93,7 @@ a {
 }
 
 .login-form input {
-    width: 320px;
+    width: 340px;
     background-color: #1f2c38;
     border: 1px solid #2c3b48;
     border-radius: 4px;
@@ -114,9 +114,10 @@ a {
     color: #0f1923;
     border: none;
     border-radius: 30px;
+    margin-top: 10px;
     padding: 14px 0;
-    width: 320px;
-    font-family: 'Rajdhani', sans-serif;
+    width: 340px;
+    font-family: 'VALORANT';
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -126,11 +127,11 @@ a {
 }
 
 .botao-vermelho:hover {
-    background-color: #ff2e3f;
+    color: #ece8e1;
 }
 
 .login-arte img {
-    width: 280px;
+    width: 330px;
     border-radius: 6px;
 }
 
@@ -190,7 +191,6 @@ a {
     padding: 14px 16px;
     border-radius: 6px;
     font-size: 15px;
-    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ece8e1;
@@ -225,7 +225,6 @@ a {
     padding: 14px 16px;
     font-family: 'VALORANT';
     font-size: 15px;
-    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
@@ -244,7 +243,7 @@ a {
 .conteudo {
     flex: 1;
     padding: 40px 30px;
-    background-image: url('/img/fundo-painel.jpg');
+    background-image: url('/img/fundo-ascent.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -255,7 +254,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(15, 25, 35, 0.85);
+    background: rgba(15, 25, 35, 0.55);
     z-index: 0;
 }
 
@@ -287,7 +286,6 @@ a {
     margin-right: 72px;
     font-family: 'VALORANT';
     font-size: 15px;
-    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
@@ -451,6 +449,25 @@ table tr:hover td {
     display: flex;
     gap: 14px;
     margin-top: 10px;
+}
+
+.botao-salvar {
+    background-color: #ff4655;
+    color: #0f1923;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 26px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.botao-salvar:hover {
+    color:#ece8e1
 }
 
 .botao-cancelar {

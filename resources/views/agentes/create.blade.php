@@ -53,7 +53,7 @@
             </div>
 
             <div class="botoes-form">
-                <button type="submit" class="botao-adicionar">Salvar</button>
+                <button type="submit" class="botao-salvar">Salvar</button>
                 <a href="{{ route('agentes.index') }}">
                     <button type="button" class="botao-cancelar">Cancelar</button>
                 </a>
