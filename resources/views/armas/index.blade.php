@@ -35,7 +35,7 @@
                     <tr>
                         <td>{{ $arma->nome }}</td>
                         <td>{{ $arma->classe }}</td>
-                        <td>{{ number_format($arma->preco, 2, ',', '.') }}</td>
+                        <td>{{ number_format($arma->preco, 0, '', '') }}</td>
                         <td>
                             <div class="acoes">
                                 <a href="{{ route('armas.edit', $arma->id) }}">
