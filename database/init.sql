@@ -73,11 +73,11 @@ INSERT INTO agentes (nome, funcao, nacionalidade, descricao, created_at, updated
 
 -- algumas armas ja cadastradas
 INSERT INTO armas (nome, classe, preco, created_at, updated_at) VALUES
-('Classic', 'Pistola', 0.00, NOW(), NOW()),
-('Vandal', 'Fuzil', 2900.00, NOW(), NOW()),
-('Phantom', 'Fuzil', 2900.00, NOW(), NOW()),
-('Operator', 'Precisao', 4700.00, NOW(), NOW()),
-('Spectre', 'Submetralhadora', 1600.00, NOW(), NOW());
+('Classic', 'Pistola', 0, NOW(), NOW()),
+('Vandal', 'Fuzil', 2900, NOW(), NOW()),
+('Phantom', 'Fuzil', 2900, NOW(), NOW()),
+('Operator', 'Precisao', 4700, NOW(), NOW()),
+('Spectre', 'Submetralhadora', 1600, NOW(), NOW());
 
 -- algumas ultimates ja cadastradas, ligadas aos agentes acima
 INSERT INTO ultimates (agente_id, preco_orbes, descricao, created_at, updated_at) VALUES

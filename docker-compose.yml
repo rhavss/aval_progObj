@@ -1,0 +1,45 @@
+services:
+
+  # container do laravel (php)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: valorant_app
+    ports:
+      - "8000:8000"
+    volumes:
+      # mantem o codigo sincronizado entre a sua pasta e o container
+      # assim, se voce editar um arquivo, nao precisa reconstruir a imagem
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - valorant_network
+
+  # container do banco de dados (mysql)
+  db:
+    image: mysql:8.0
+    container_name: valorant_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: valorant_admin
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
+    ports:
+      - "3306:3306"
+    volumes:
+      # guarda os dados do banco de forma permanente (nao perde ao reiniciar o container)
+      - valorant_db_data:/var/lib/mysql
+      # roda o init.sql automaticamente na primeira vez que o container subir
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - valorant_network
+
+volumes:
+  valorant_db_data:
+
+networks:
+  valorant_network:
+    driver: bridge
