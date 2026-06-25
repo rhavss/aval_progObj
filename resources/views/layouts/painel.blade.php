@@ -37,7 +37,7 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit">
-                        <img src="{{ asset('img/icone-sair.png') }}" alt="" class="sidebar-icone">
+                        <img src="{{ asset('img/icone-sair.png') }}" alt="" class="sidebar-icone-sair">
                         Sair
                     </button>
                 </form>

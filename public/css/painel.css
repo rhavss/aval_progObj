@@ -150,10 +150,10 @@ a {
 
 .sidebar {
     font-family: 'VALORANT';
-    width: 190px;
+    width: 170px;
     background-color: #0f1923;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 30px 10px;
+    padding: 30px 8px;
     display: flex;
     flex-direction: column;
 }
@@ -184,8 +184,7 @@ a {
     gap: 12px;
     padding: 14px 16px;
     border-radius: 6px;
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 14px;
     text-transform: uppercase;
     color: #ece8e1;
 }
@@ -205,6 +204,12 @@ a {
     object-fit: contain;
 }
 
+.sidebar-icone-sair {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 .sidebar-sair {
     margin-top: auto;
 }
@@ -218,8 +223,7 @@ a {
     gap: 12px;
     padding: 14px 16px;
     font-family: 'VALORANT';
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 12px;
     text-transform: uppercase;
     cursor: pointer;
     width: 100%;
@@ -276,11 +280,10 @@ a {
     color: #0f1923;
     border: none;
     border-radius: 30px;
-    padding: 14px 26px;
+    padding: 14px 28px;
     margin-right: 72px;
     font-family: 'VALORANT';
     font-size: 15px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
     white-space: nowrap;
