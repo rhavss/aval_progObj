@@ -49,22 +49,3 @@ VALUES (
     NOW(),
     NOW()
 );
-
-INSERT INTO agentes (nome, funcao, nacionalidade, descricao, created_at, updated_at) VALUES
-('Jett', 'Duelista', 'Coreia do Sul', 'Jett se movimenta pelo campo de batalha com agilidade que ninguem mais tem.', NOW(), NOW()),
-('Sage', 'Sentinela', 'China', 'Sage cria seguranca pra ela e pro time, podendo curar e ressuscitar aliados.', NOW(), NOW()),
-('Omen', 'Controlador', 'Desconhecida', 'Omen cria as sombras que ele mesmo teme, caçando os inimigos de dentro da escuridao.', NOW(), NOW()),
-('Sova', 'Iniciador', 'Russia', 'Sova rastreia, encontra e elimina os inimigos com seu arco e suas flechas de reconhecimento.', NOW(), NOW());
-
-INSERT INTO armas (nome, classe, preco, created_at, updated_at) VALUES
-('Classic', 'Pistola', 0, NOW(), NOW()),
-('Vandal', 'Fuzil', 2900, NOW(), NOW()),
-('Phantom', 'Fuzil', 2900, NOW(), NOW()),
-('Operator', 'Precisao', 4700, NOW(), NOW()),
-('Spectre', 'Submetralhadora', 1600, NOW(), NOW());
-
-INSERT INTO ultimates (agente_id, preco_orbes, descricao, created_at, updated_at) VALUES
-(1, 6, 'Bladestorm: Jett invoca um conjunto de adagas que causam morte instantanea.', NOW(), NOW()),
-(2, 8, 'Ressuscitar: Sage traz um aliado morto de volta a vida, com vida plena.', NOW(), NOW()),
-(3, 8, 'De Dentro das Sombras: Omen se teleporta pra qualquer lugar do mapa que ele ja tenha visto.', NOW(), NOW()),
-(4, 8, 'Fúria Implacavel: Sova solta tres flechas explosivas no ar que cobrem uma area enorme.', NOW(), NOW());
