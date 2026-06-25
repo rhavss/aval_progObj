@@ -14,7 +14,6 @@ class Ultimate extends Model
         'descricao',
     ];
 
-    // toda ultimate pertence a um agente
     public function agente()
     {
         return $this->belongsTo(Agente::class);

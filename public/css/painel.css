@@ -1,7 +1,3 @@
-/* css do painel valorant
-   cores e fontes baseadas no design enviado:
-   fundo escuro, detalhes em vermelho/coral, fonte condensada */
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
 
 * {
@@ -144,7 +140,7 @@ a {
 }
 
 /* ===================================
-   ESTRUTURA DO PAINEL (depois do login)
+   ESTRUTURA DO PAINEL
    =================================== */
 
 .painel {

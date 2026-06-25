@@ -19,7 +19,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 /*
 |--------------------------------------------------------------------------
-| rotas do painel (precisam estar logado pra acessar)
+| rotas do painel
 |--------------------------------------------------------------------------
 */
 

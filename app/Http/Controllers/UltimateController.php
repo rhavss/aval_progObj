@@ -10,7 +10,6 @@ class UltimateController extends Controller
 {
     public function index()
     {
-        // carrega tambem o agente relacionado de cada ultimate, pra mostrar o nome na listagem
         $ultimates = Ultimate::with('agente')->orderBy('id')->get();
 
         return view('ultimates.index', compact('ultimates'));
@@ -18,7 +17,6 @@ class UltimateController extends Controller
 
     public function create()
     {
-        // precisa da lista de agentes pra preencher o select do formulario
         $agentes = Agente::orderBy('nome')->get();
 
         return view('ultimates.create', compact('agentes'));

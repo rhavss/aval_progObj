@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class AgenteController extends Controller
 {
-    // lista todos os agentes cadastrados
     public function index()
     {
         $agentes = Agente::orderBy('nome')->get();
@@ -15,13 +14,11 @@ class AgenteController extends Controller
         return view('agentes.index', compact('agentes'));
     }
 
-    // mostra o formulario de cadastro
     public function create()
     {
         return view('agentes.create');
     }
 
-    // salva um novo agente no banco
     public function store(Request $request)
     {
         $request->validate([
@@ -36,13 +33,11 @@ class AgenteController extends Controller
         return redirect()->route('agentes.index')->with('sucesso', 'Agente cadastrado com sucesso!');
     }
 
-    // mostra o formulario de edicao com os dados do agente ja preenchidos
     public function edit(Agente $agente)
     {
         return view('agentes.edit', compact('agente'));
     }
 
-    // atualiza os dados do agente
     public function update(Request $request, Agente $agente)
     {
         $request->validate([
@@ -57,7 +52,6 @@ class AgenteController extends Controller
         return redirect()->route('agentes.index')->with('sucesso', 'Agente atualizado com sucesso!');
     }
 
-    // remove o agente do banco
     public function destroy(Agente $agente)
     {
         $agente->delete();
